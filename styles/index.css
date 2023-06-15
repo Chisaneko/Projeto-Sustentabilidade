@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    background-color: #346566;
+    font-family: 'Inter', sans-serif;
+    min-width: 335px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #30522A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    color: white;
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+main{
+    flex: 1;
+}
+main div#mainmenu{
+    background-color: #D7CCB1;
+    display: block;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top: 0px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main div.mm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 7.5px;
+    margin-left: 2.5%;
+    height: 54px;
+    width: 95%;
+    background-color: #588250;
+    border-style: solid;
+    border-color: #1B5311;
+    border-radius: 5px;
+    border-width: 1px;
+    color: #EAD464;
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main div.mm-dia{
+    height: 27px;
+    width: 37.5%;
+    min-width: 122px;
+    text-indent: 10px;
+    align-self: flex-start;
+
+}
+
+main div.mm-ponto-t{
+    height: 27px;
+    width: 37.5%;
+    text-align: right;
+    align-self: flex-start;
+
+}
+
+main div.mm-ponto-n{
+    height: 27px;
+    width: 10%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+main div.mm-garrafa,.mm-gota,.mm-planta{
+    display:flex;
+    height: 20px;
+    margin-bottom: 6px;
+    padding: 0px 7.5px;
+}
+
+main div#dicas{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+main h1#dicas-title{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #EAD464;
+    text-align: center;
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    font-size: 20px;
+}
+
+main p#dicas-text{
+    color: white;
+    text-align: justify;
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30px;
+    background-color: #183334;
+}
+
+footer p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
