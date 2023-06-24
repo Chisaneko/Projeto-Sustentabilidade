@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <title>Sustent Quest</title>
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <header>
+            <div id="user">
+                <div id="user-img">
+                    <img src="imgs/tree.png"  alt="Árvore">
+                </div>
+                <div id="user-status">
+                    <p>Nome: </p>
+                    <p id="user-name" class="inside">David G</p>
+                    <p>Pontos: </p>
+                    <p id="user-data" class="inside">0</p>
+                    <p>Status: </p>
+                    <p id="tree-status" class="inside">Bom</p>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <a href="#" id="main-menu">MENU PRINCIPAL</a>
+            <a href="#" id="tips">DICAS</a>
+            <a href="#" id="stats">ESTATÍSTICAS</a>
+        </nav>
+    
+        <main>
+            <div id="mainmenu">
+                <div class="mm">
+                    <div id="mm-dia-seg"     class="mm-dia">Segunda-Feira</div>
+                    <div id="mm-ponto-t-seg" class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-seg" class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-seg" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafasegico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasegcora1" class="icon" onclick="heartFill('garrafa','seg',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasegcora2" class="icon" onclick="heartFill('garrafa','seg',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasegcora3" class="icon" onclick="heartFill('garrafa','seg',3)">
+                    </div>
+    
+                    <div id="mm-planta-seg" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantasegico"  >
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasegcora1" class="icon" onclick="heartFill('planta','seg',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasegcora2" class="icon" onclick="heartFill('planta','seg',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasegcora3" class="icon" onclick="heartFill('planta','seg',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-seg" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotasegico"  >
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasegcora1" class="icon" onclick="heartFill('gota','seg',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasegcora2" class="icon" onclick="heartFill('gota','seg',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasegcora3" class="icon" onclick="heartFill('gota','seg',3)">
+                    </div>
+    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-ter"       class="mm-dia">Terça-Feira</div>
+                    <div id="mm-ponto-t-ter"   class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-ter"   class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-te" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafaterico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafatercora1" class="icon" onclick="heartFill('garrafa','ter',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafatercora2" class="icon" onclick="heartFill('garrafa','ter',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafatercora3" class="icon" onclick="heartFill('garrafa','ter',3)">
+                    </div>
+    
+                    <div id="mm-planta-ter" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantaterico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantatercora1" class="icon" onclick="heartFill('planta','ter',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantatercora2" class="icon" onclick="heartFill('planta','ter',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantatercora3" class="icon" onclick="heartFill('planta','ter',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-ter" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotaterico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotatercora1" class="icon" onclick="heartFill('gota','ter',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotatercora2" class="icon" onclick="heartFill('gota','ter',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotatercora3" class="icon" onclick="heartFill('gota','ter',3)">
+                    </div>
+                    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-qua"      class="mm-dia">Quarta-Feira</div>
+                    <div id="mm-ponto-t-qua"  class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-qua"  class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-qua" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafaquaico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquacora1" class="icon" onclick="heartFill('garrafa','qua',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquacora2" class="icon" onclick="heartFill('garrafa','qua',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquacora3" class="icon" onclick="heartFill('garrafa','qua',3)">
+                    </div>
+    
+                    <div id="mm-planta-qua" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantaquaico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquacora1" class="icon" onclick="heartFill('planta','qua',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquacora2" class="icon" onclick="heartFill('planta','qua',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquacora3" class="icon" onclick="heartFill('planta','qua',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-qua" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotaquaico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquacora1" class="icon" onclick="heartFill('gota','qua',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquacora2" class="icon" onclick="heartFill('gota','qua',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquacora3" class="icon" onclick="heartFill('gota','qua',3)">
+                    </div>
+    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-qui"      class="mm-dia">Quinta-Feira</div>
+                    <div id="mm-ponto-t-qui"  class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-qui"  class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-qui" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafaquiico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquicora1" class="icon" onclick="heartFill('garrafa','qui',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquicora2" class="icon" onclick="heartFill('garrafa','qui',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafaquicora3" class="icon" onclick="heartFill('garrafa','qui',3)">
+                    </div>
+    
+                    <div id="mm-planta-qui" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantaquiico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquicora1" class="icon" onclick="heartFill('planta','qui',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquicora2" class="icon" onclick="heartFill('planta','qui',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantaquicora3" class="icon" onclick="heartFill('planta','qui',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-qui" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotaquiico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquicora1" class="icon" onclick="heartFill('gota','qui',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquicora2" class="icon" onclick="heartFill('gota','qui',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotaquicora3" class="icon" onclick="heartFill('gota','qui',3)">
+                    </div>
+    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-sex"       class="mm-dia">Sexta-Feira</div>
+                    <div id="mm-ponto-t-sex"   class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-sex"   class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-sex" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafasexico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasexcora1" class="icon" onclick="heartFill('garrafa','sex',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasexcora2" class="icon" onclick="heartFill('garrafa','sex',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasexcora3" class="icon" onclick="heartFill('garrafa','sex',3)">
+                    </div>
+    
+                    <div id="mm-planta-sex" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantasexico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasexcora1" class="icon" onclick="heartFill('planta','sex',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasexcora2" class="icon" onclick="heartFill('planta','sex',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasexcora3" class="icon" onclick="heartFill('planta','sex',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-sex" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotasexico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasexcora1" class="icon" onclick="heartFill('gota','sex',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasexcora2" class="icon" onclick="heartFill('gota','sex',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasexcora3" class="icon" onclick="heartFill('gota','sex',3)">
+                    </div>
+    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-sab"      class="mm-dia">Sábado</div>
+                    <div id="mm-ponto-t-sab"  class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-sab"  class="mm-ponto-n">0</div>
+    
+                    <div id="mm-garrafa-sab" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafasabico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasabcora1" class="icon" onclick="heartFill('garrafa','sab',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasabcora2" class="icon" onclick="heartFill('garrafa','sab',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafasabcora3" class="icon" onclick="heartFill('garrafa','sab',3)">
+                    </div>
+    
+                    <div id="mm-planta-sab" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantasabico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasabcora1" class="icon" onclick="heartFill('planta','sab',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasabcora2" class="icon" onclick="heartFill('planta','sab',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantasabcora3" class="icon" onclick="heartFill('planta','sab',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-sab" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotasabico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasabcora1" class="icon" onclick="heartFill('gota','sab',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasabcora2" class="icon" onclick="heartFill('gota','sab',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotasabcora3" class="icon" onclick="heartFill('gota','sab',3)">
+                    </div>
+    
+                </div>
+                <div class="mm">
+                    <div id="mm-dia-dom"     class="mm-dia">Domingo</div>
+                    <div id="mm-ponto-t-dom" class="mm-ponto-t">Pontos</div>
+                    <div id="mm-ponto-n-dom" class="mm-ponto-n">0</div>
+                    
+                    <div id="mm-garrafa-dom" class="mm-garrafa">
+                        <img src="imgs/garrafaico2.png"  alt="Garrafa"       id="garrafadomico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafadomcora1" class="icon" onclick="heartFill('garrafa','dom',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafadomcora2" class="icon" onclick="heartFill('garrafa','dom',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="garrafadomcora3" class="icon" onclick="heartFill('garrafa','dom',3)">
+                    </div>
+    
+                    <div id="mm-planta-dom" class="mm-planta">
+                        <img src="imgs/plantaico.png"    alt="Planta"        id="plantadomico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantadomcora1" class="icon" onclick="heartFill('planta','dom',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantadomcora2" class="icon" onclick="heartFill('planta','dom',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="plantadomcora3" class="icon" onclick="heartFill('planta','dom',3)">
+                    </div>
+    
+                    <div id="mm-garrafa-dom" class="mm-gota">
+                        <img src="imgs/gota.png"         alt="Gota"          id="gotadomico"   class="icon" onclick="test()">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotadomcora1" class="icon" onclick="heartFill('gota','dom',1)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotadomcora2" class="icon" onclick="heartFill('gota','dom',2)">
+                        <img src="imgs/coracaovazio.png" alt="Coração Vazio" id="gotadomcora3" class="icon" onclick="heartFill('gota','dom',3)">
+                    </div>
+                </div>
+                <div class="mm-buttons">
+                    <p class="buttons" onclick="resetButton()">RECOMEÇAR</p> <p class="buttons" onclick="finishButton()">FINALIZAR</p>
+                </div>
+            </div>
+            <div id="dicas">
+                <h1 id="dicas-title">DICAS DO MOMENTO</h1>
+                <p id="dicas-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore ut a magnam totam ab dolor quod eum, ratione vitae perferendis minima eius earum nihil commodi sapiente facere est ducimus.</p>
+            </div>
+        </main>
+        <footer>
+            <p>Made by &copy;Chisaneko </p>
+        </footer>    
+        <script src="cordova.js"></script>
+        <script src="scripts/filesaredeady.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

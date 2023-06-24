@@ -1,21 +1,84 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 *{
     margin: 0px;
     padding: 0px;
 }
 
+
 html{
     background-color: #346566;
     font-family: 'Inter', sans-serif;
-    min-width: 335px;
+    min-width: 350px;
 }
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+header{
+    background-image: linear-gradient(180deg,#b0cfa9,#30522A);
+}
+
+header div#user{
+    display: flex;
+    margin: 10px auto;
+    width: 95%;
+    height: 120px;
+    border: 2px dashed #523727;
+    background-color: #D7CCB1;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+header div#user-img{
+    align-self: center;
+    border: 1px solid #523727;
+    height: 110px;
+    min-width: 90px;
+    max-width: 90px;
+    margin-left: 5px;
+    background-color: #a89f88;
+}
+header div#user-status{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-self: center;
+    text-indent: 5px;
+    background-color: #a89f88;
+    height: 110px;
+    width:  100%;
+    font-size: 16px;
+    margin-right: 5px;
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    border: 1px solid #523727;
+    border-left-width: 0px;
+}
+header div#user-status p{
+    align-self: center;
+    text-align: center;
+    width: 20%;
+    margin: 0px;
+    margin-left: 5px;
+    background-color: #523727;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px dashed black;
+    color: #EAD464;
+    min-width: 70px;
+    min-height: 20px;
+}
+header div#user-status p.inside{
+    border-left-width: 0px;
+    text-align: left;
+    width: 63%;
+    margin: 0px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #35292283;
+    color: white;
+}
+
+
 nav{
     display: flex;
     flex-direction: row;
@@ -74,8 +137,33 @@ main div.mm{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+main div.mm-buttons{
+    margin: auto;
+    padding: 10px 0px;
+    height: 25px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+main p.buttons{
+    text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:#30522A;
+    border: 1px solid #0f3109;
+    text-align: center;
+    font-size: 18px;
+    min-width: 120px;
+}
+main p.buttons:hover{
+    text-decoration: underline;
+}
+
 main div.mm-dia{
-    height: 27px;
+    padding-top: 3px;
+    height: 22px;
     width: 37.5%;
     min-width: 122px;
     text-indent: 10px;
@@ -84,15 +172,16 @@ main div.mm-dia{
 }
 
 main div.mm-ponto-t{
-    height: 27px;
+    padding-top: 3px;
+    height: 22px;
     width: 37.5%;
     text-align: right;
     align-self: flex-start;
-
 }
 
 main div.mm-ponto-n{
-    height: 27px;
+    padding-top: 3px;
+    height: 22px;
     width: 10%;
     text-align: left;
     align-self: flex-start;
@@ -103,6 +192,10 @@ main div.mm-garrafa,.mm-gota,.mm-planta{
     height: 20px;
     margin-bottom: 6px;
     padding: 0px 7.5px;
+}
+
+img.icon:hover{
+    filter:drop-shadow(0px 0px 3px white);
 }
 
 main div#dicas{
@@ -142,4 +235,11 @@ footer p{
     font-size: 20px;
     text-align: center;
     font-weight: bold;
+}
+
+.icon{
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
 }
